@@ -4,7 +4,7 @@
 <section>
     <div class="w-[800px] mx-auto mt-20 p-5 border">
         <h1 class="text-4xl font-bold mb-16">Pendaftaran Data Diri</h1>
-        <form action="register" method="post">
+        <form action="/donor/register" method="post">
             @csrf
             <div class="flex flex-col gap-3">
                 <div class="flex items-center">

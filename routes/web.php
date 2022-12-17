@@ -15,7 +15,11 @@ Route::post('admin/logout', [AccountController::class, 'logout']);
 // Route::get('register', [AccountController::class, 'register']);
 // Route::post('register', [AccountController::class, 'store']);
 
-Route::get('dashboard', [AdminController::class, 'dashboard']);
+Route::prefix('dashboard')->group(function(){
+    Route::get('/', [AdminController::class, 'dashboard']);
+    Route::get('donor/{id}', [AdminController::class, 'findDonor']);
+    Route::get('form-kesehatan/{id}', [AdminController::class, 'form']);
+});
 
 Route::prefix('donor')->group(function(){
     Route::get('/', [DonorController::class, 'index']);
@@ -23,4 +27,7 @@ Route::prefix('donor')->group(function(){
     Route::post('register', [DonorController::class, 'store']);
     Route::get('questionnaire', [DonorController::class, 'questionnaire']);
     Route::post('questionnaire', [DonorController::class, 'storeQuestionnaire']);
+    Route::post('form-kesehatan', [DonorController::class, 'formKesehatan']);
+    Route::put("/update/{id}", [DonorController::class, 'update']);
+
 });

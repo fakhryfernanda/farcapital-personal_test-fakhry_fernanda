@@ -7,14 +7,18 @@
         <div class="">
             <h2 class="text-2xl font-semibold mb-4">Daftar Calon Pendonor</h2>
             @foreach($donors as $donor)
-            <div class="">
-                <ul class="flex gap-8">
-                    <li>{{ $donor->name }}</li>
-                    {{-- <li>{{ $donor->gender }}</li>
-                    <li>{{ $donor->birthday }}</li>
-                    <li>{{ $donor->address }}</li> --}}
-                </ul>
-            </div>
+            <table>
+                <tr>
+                    <th class="w-[600px] py-1 px-4 border text-center">Nama Lengkap</th>
+                    <th class="py-1 px-4 border text-center">Keterangan boleh mendonor</th>
+                    <th class="py-1 px-4 border text-center"></th>
+                </tr>
+                <tr>
+                    <td class="w-[600px] py-1 px-4 border text-center">{{ $donor->name }}</td>
+                    <td class="py-1 px-4 border text-center">Tidak</td>
+                    <td class="py-1 px-4 border text-center"><a href="dashboard/donor/{{ $donor->id }}" class="text-blue-500 underline">Detail</a></td>
+                </tr>
+            </table>
             @endforeach
         </div>
     </div>

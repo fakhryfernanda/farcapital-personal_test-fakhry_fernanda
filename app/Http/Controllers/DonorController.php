@@ -63,4 +63,18 @@ class DonorController extends Controller
         DonorQuestionnaire::query()->create($payload);
         return redirect("/");
     }
+
+    public function update(Request $request, $id) {
+        $payload = [
+            'weight' => $request->input("weight"),
+            'temperature' => $request->input("temperature"),
+            'sistole' => $request->input("sistole"),
+            'diastole' => $request->input("diastole"),
+            'pulse' => $request->input("pulse"),
+            'hemoglobin' => $request->input("hemoglobin"),
+        ];
+
+        Donor::where("id", $id)->update($payload);
+        return redirect("dashboard"); // ke halaman product
+    }
 }
