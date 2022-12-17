@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class DonorController extends Controller
 {
+    public function register()
+    {
+        return view('donor/register');
+    }
     public function store(Request $request)
     {
         $payload = [
