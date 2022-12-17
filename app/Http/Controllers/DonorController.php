@@ -11,6 +11,7 @@ class DonorController extends Controller
     {
         return view('donor/register');
     }
+
     public function store(Request $request)
     {
         $payload = [
@@ -21,6 +22,6 @@ class DonorController extends Controller
         ];
 
         Donor::query()->create($payload);
-        return redirect("/");
+        return redirect("donor/isi-persyaratan");
     }
 }
