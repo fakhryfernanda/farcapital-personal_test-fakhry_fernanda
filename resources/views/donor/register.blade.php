@@ -4,7 +4,8 @@
 <section>
     <div class="w-[800px] mx-auto mt-20 p-5 border">
         <h1 class="text-4xl font-bold mb-16">Pendaftaran Data Diri</h1>
-        <form action="donor/register">
+        <form action="donor/register" method="post">
+            @csrf
             <div class="flex flex-col gap-3">
                 <div class="flex items-center">
                     <label for="name" class="w-[200px]">Nama Lengkap</label>
@@ -25,6 +26,7 @@
                     <label for="address" class="w-[200px]">Alamat</label>
                     <input type="text" id="address" name="address" class="w-[300px] py-1 px-2 border border-slate-400">
                 </div>
+                <button type="submit" class="w-fit mx-auto py-2 px-4 bg-sky-400 text-white rounded-md">Daftar</button>
             </div>
         </form>
     </div>
