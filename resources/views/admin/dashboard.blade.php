@@ -10,12 +10,12 @@
             <table>
                 <tr>
                     <th class="w-[600px] py-1 px-4 border text-center">Nama Lengkap</th>
-                    <th class="py-1 px-4 border text-center">Keterangan boleh mendonor</th>
+                    {{-- <th class="py-1 px-4 border text-center">Keterangan boleh mendonor</th> --}}
                     <th class="py-1 px-4 border text-center"></th>
                 </tr>
                 <tr>
                     <td class="w-[600px] py-1 px-4 border text-center">{{ $donor->name }}</td>
-                    <td class="py-1 px-4 border text-center">Tidak</td>
+                    {{-- <td class="py-1 px-4 border text-center">{{ isset($donor->weight) ? 'Boleh' : 'Tidak boleh' }}</td> --}}
                     <td class="py-1 px-4 border text-center"><a href="dashboard/donor/{{ $donor->id }}" class="text-blue-500 underline">Detail</a></td>
                 </tr>
             </table>

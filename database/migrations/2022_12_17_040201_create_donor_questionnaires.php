@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('donor_questionnaires', function (Blueprint $table) {
             $table->id();
+            $table->integer('donor_id');
             $table->char('hepatitis');
             $table->char('aids');
             $table->char('ketergantungan_obat');

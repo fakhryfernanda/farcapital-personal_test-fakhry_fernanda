@@ -6,6 +6,10 @@
         <h1 class="mb-10 text-4xl font-bold">Kuesioner Donor</h1>
         <form action="questionnaire" method="post">
             @csrf
+            <div class="flex mb-8">
+                <label for="donor_id" class="mr-8">Donor ID</label><br>
+                <input required type="number" id="donor_id" name="donor_id" class="border border-slate-400">
+            </div>
             <div class="flex flex-col gap-4">
                 <div class="">
                     <p class="italic font-semibold">Apakah anda?</p>

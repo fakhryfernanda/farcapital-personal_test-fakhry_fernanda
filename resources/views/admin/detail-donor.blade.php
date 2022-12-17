@@ -21,6 +21,15 @@
                 <h3 class="text-lg font-semibold">Alamat</h3>
                 <p>{{ $donor->address }}</p>
             </div>
+            <div class="">
+                <h3 class="text-lg font-semibold">Boleh donor</h3>
+                <p>{{ $bolehDonor }}</p>
+            </div>
+            {{-- <div class="">
+                <h3 class="text-lg font-semibold">Hepatitis</h3>
+                <p>{{ $donorQuestionnaire->hepatitis }}</p>
+            </div> --}}
+            
             <button class="w-fit py-2 px-4 bg-blue-500 text-white rounded-md">
                 <a href="/dashboard/form-kesehatan/{{ $donor->id }}">Isi Form Kesehatan</a>
             </button>

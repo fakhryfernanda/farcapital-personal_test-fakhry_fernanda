@@ -35,6 +35,7 @@ class DonorController extends Controller
     public function storeQuestionnaire(Request $request) 
     {
         $payload = [
+            'donor_id' => $request->input("donor_id"),
             'hepatitis' => $request->input("hepatitis"),
             'aids' => $request->input("aids"),
             'ketergantungan_obat' => $request->input("ketergantungan_obat"),
