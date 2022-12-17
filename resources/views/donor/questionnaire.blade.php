@@ -4,7 +4,7 @@
 <section class="mb-10">
     <div class="w-[1200px] mx-auto mt-24 p-4 border border-slate-400">
         <h1 class="mb-10 text-4xl font-bold">Kuesioner Donor</h1>
-        <form action="donor/register" method="post">
+        <form action="questionnaire" method="post">
             @csrf
             <div class="flex flex-col gap-4">
                 <div class="">
@@ -123,9 +123,9 @@
                     <div class="flex items-center">
                         <p class="w-[800px] mr-8">14. Apakah anda melakukan vaksinasi polio, influenza, kolera, stetanus
                             dipteria atau profilaksis?</p>
-                        <input required type="radio" id="ya" name="vaksinasi" value="T" class="mr-1">
+                        <input required type="radio" id="ya" name="vaksinasi_polio" value="T" class="mr-1">
                         <label for="ya" class="mr-8">Ya</label><br>
-                        <input required type="radio" id="tidak" name="vaksinasi" value="F" class="mr-1">
+                        <input required type="radio" id="tidak" name="vaksinasi_polio" value="F" class="mr-1">
                         <label for="tidak">Tidak</label><br>
                     </div>
                 </div>
