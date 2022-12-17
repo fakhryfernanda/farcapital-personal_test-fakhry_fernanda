@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('donors', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->char('gender');
+            $table->date('birthday');
+            $table->text('address');
             $table->timestamps();
         });
     }
