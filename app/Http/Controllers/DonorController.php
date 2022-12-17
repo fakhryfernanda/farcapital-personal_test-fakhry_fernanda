@@ -22,6 +22,11 @@ class DonorController extends Controller
         ];
 
         Donor::query()->create($payload);
-        return redirect("donor/isi-persyaratan");
+        return redirect("donor/isi-questionnaire");
+    }
+
+    public function questionnaire() 
+    {
+        return view('donor/questionnaire');
     }
 }
